@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    testRuntimeOnly 'mysql:mysql-connector-java:8.0.22'
+    testRuntimeOnly 'com.github.javafaker:javafaker:1.0.2'
+    testRuntimeOnly 'commons-dbutils:commons-dbutils:1.7'
+}
+
+test {
+    useJUnitPlatform()
+}
